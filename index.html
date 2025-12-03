@@ -23,7 +23,18 @@
     </section>
 
     <section id="map" class="map" role="region" aria-label="Map showing cleanups and weather">
-      <div class="map-placeholder">Map will load here — click "Use My Location"</div>
+      <!-- Embedded Google Map for next cleanup (Pasir Ris) -->
+      <iframe
+        title="ShoreSquad — Next Cleanup at Pasir Ris"
+        aria-label="Map showing Next Cleanup location at Pasir Ris"
+        src="https://www.google.com/maps?q=Next+Cleanup@1.381497,103.955574&z=17&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="map-fallback" style="display:none;">If the map does not load, <a href="https://www.google.com/maps?q=1.381497,103.955574" target="_blank" rel="noopener">open in Google Maps</a>.</div>
     </section>
 
     <section id="feed" class="feed" aria-label="Community feed">
