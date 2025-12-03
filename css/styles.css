@@ -1,0 +1,45 @@
+/* ShoreSquad styles */
+:root{
+  --sea-foam: #00A6A6; /* main teal */
+  --coral: #FF6B6B;    /* accent */
+  --sand: #F6E7C1;     /* neutral background */
+  --deep-navy: #05204A;/* dark text */
+  --fresh-green: #3BB273;/* eco accent */
+  --muted: #6B7A8F;    /* secondary text */
+  --radius: 10px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  color:var(--deep-navy);
+  background:linear-gradient(180deg,var(--sand),#fff);
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{padding:1.25rem 0}
+#site-title{margin:0;font-size:1.75rem}
+.tagline{margin:0;color:var(--muted)}
+.controls{display:flex;gap:.5rem;align-items:center;margin:1rem 0}
+.btn{background:#fff;border:1px solid var(--sea-foam);padding:.5rem .75rem;border-radius:8px;cursor:pointer;color:var(--deep-navy)}
+.btn:focus{outline:3px solid rgba(0,166,166,.25);outline-offset:2px}
+.btn-accent{background:var(--coral);color:#fff;border-color:var(--coral)}
+.btn-accent:focus{outline:3px solid rgba(255,107,107,.25)}
+.weather{margin-left:1rem;color:var(--muted)}
+.map{height:60vh;border-radius:var(--radius);overflow:hidden;background:#e6f7f7;display:flex;align-items:center;justify-content:center;border:1px solid rgba(5,32,74,.06)}
+.map-placeholder{color:var(--muted)}
+.feed{margin-top:1rem}
+.feed h2{margin:.5rem 0}
+#events-list{list-style:none;padding:0;margin:0}
+.site-footer{padding:1rem 0;color:var(--muted);font-size:.9rem}
+
+@media (max-width:640px){
+  .controls{flex-direction:column;align-items:flex-start}
+  .map{height:45vh}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.001ms!important;transition-duration:0.001ms!important}
+}
